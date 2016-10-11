@@ -8,6 +8,10 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
+      .state('index', {
+        url: '/',
+        controller: redirectController
+      })
       .state('public', {
         abstract: true,
         url: '/public',
@@ -33,15 +37,15 @@
     })
     .state('404', {
       url: '/404',
-      templateUrl: 'app/static/404.html',
+      templateUrl: 'app/static/404.html'
     })
     .state('400', {
       url: '/400',
-      templateUrl: 'app/static/400.html',
+      templateUrl: 'app/static/400.html'
     })
     .state('500', {
       url: '/500',
-      templateUrl: 'app/static/500.html',
+      templateUrl: 'app/static/500.html'
     });
     $urlRouterProvider.otherwise('404');
     $locationProvider.html5Mode(true);
@@ -56,6 +60,10 @@
 
   function bookPrepService($stateParams, BookService) {
     return BookService.getBook($stateParams.itemId);
+  }
+
+  function redirectController($state){
+    return $state.go('public.catalog')
   }
 
 

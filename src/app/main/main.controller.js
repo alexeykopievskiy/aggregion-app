@@ -12,7 +12,5 @@
 
     vm.catalog = catalogPrepService.catalog;
 
-    console.log(vm.catalog);
-
   }
 })();

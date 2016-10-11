@@ -11,7 +11,7 @@ angular
 
     return directive;
 
-    function linkFunc(scope, element, attrs, ctrl) {
+    function linkFunc(scope, element, attrs) {
       attrs.$observe('ngSrc', function(ngSrc) {
 
         this.isImage = function(src){

@@ -11,7 +11,7 @@
     initApp()
 
     function initApp(){
-      $location.path('public/catalog')
+      //$location.path('public/catalog')
     }
 
 
