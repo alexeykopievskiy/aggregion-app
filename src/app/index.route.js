@@ -10,7 +10,8 @@
     $stateProvider
       .state('index', {
         url: '/',
-        controller: redirectController
+        controller: redirectController,
+        controllerAs: 'vm'
       })
       .state('public', {
         abstract: true,

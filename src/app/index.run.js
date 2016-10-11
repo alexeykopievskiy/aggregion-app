@@ -6,14 +6,7 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($location) {
-
-    initApp()
-
-    function initApp(){
-      //$location.path('public/catalog')
-    }
-
+  function runBlock() {
 
   }
 
