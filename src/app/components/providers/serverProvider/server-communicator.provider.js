@@ -37,9 +37,7 @@
 
          request: function request(args) {
 
-
            var url = API_URL,
-               method = args.method || 'GET',
                path = args.path || '',
                params = args.params || '',
                param = '';
@@ -49,12 +47,10 @@
           if(params){
             param = 'id'
             rest = $resource(url + path + ':' + param, {}, {query: {
-                    method: 'GET',
-                    isArray: false
-                }});
+              method: 'GET',
+              isArray: false
+            }});
           }
-
-
 
           return rest.query({id: params}).$promise
 
