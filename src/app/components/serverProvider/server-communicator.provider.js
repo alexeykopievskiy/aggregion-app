@@ -8,7 +8,7 @@
   /** @ngInject */
   function ServerCommunicator(API_URL) {
 
-    this.$get = function($http, $q, $resource) {
+    this.$get = function($resource) {
 
        return {
 
